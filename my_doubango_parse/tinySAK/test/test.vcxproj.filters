@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{e6c48374-349e-4e84-a3d5-1d297ef9cda0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_base64.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_buffer.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_condwait.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_fsm.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_heap.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_lists.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_md5.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_mutex.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_object.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_params.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_runnable.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_safeobject.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_semaphore.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_sha1.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_strings.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_threads.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_timer.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_url.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_uuid.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
