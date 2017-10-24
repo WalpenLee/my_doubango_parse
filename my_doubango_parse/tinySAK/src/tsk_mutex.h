@@ -25,8 +25,10 @@
  *
  * @author Mamadou Diop <diopmamadou(at)doubango[dot]org>
  *
-
  */
+/*
+* Ëø²Ù×÷
+*/
 #ifndef _TINYSAK_MUTEX_H_
 #define _TINYSAK_MUTEX_H_
 

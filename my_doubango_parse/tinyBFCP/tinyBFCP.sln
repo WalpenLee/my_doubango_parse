@@ -1,25 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyBFCP", "tinyBFCP.vcproj", "{78605D89-4D51-41AC-AFE2-061B4CAB81F1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7522A458-92F4-4259-B906-E84C2A65D9F1} = {7522A458-92F4-4259-B906-E84C2A65D9F1}
-		{6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA} = {6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyBFCP", "tinyBFCP.vcxproj", "{78605D89-4D51-41AC-AFE2-061B4CAB81F1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{3FC1411B-9B7E-4078-9BD5-70EB663ECF5F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7522A458-92F4-4259-B906-E84C2A65D9F1} = {7522A458-92F4-4259-B906-E84C2A65D9F1}
-		{78605D89-4D51-41AC-AFE2-061B4CAB81F1} = {78605D89-4D51-41AC-AFE2-061B4CAB81F1}
-		{6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA} = {6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{3FC1411B-9B7E-4078-9BD5-70EB663ECF5F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinySAK", "..\tinySAK\tinySAK.vcproj", "{6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinySAK", "..\tinySAK\tinySAK.vcxproj", "{6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyNET", "..\tinyNET\tinyNET.vcproj", "{7522A458-92F4-4259-B906-E84C2A65D9F1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA} = {6BC9B796-10C6-4CF7-A6E4-E2DACCDA84DA}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyNET", "..\tinyNET\tinyNET.vcxproj", "{7522A458-92F4-4259-B906-E84C2A65D9F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

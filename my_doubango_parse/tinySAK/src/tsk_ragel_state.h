@@ -18,6 +18,14 @@
 *
 */
 
+/*
+*Ragel是个有限状态机编译器，它将基于正则表达式的状态机编译成传统语言（C，C++，D，Java，Ruby等）的解析器。
+*Ragel不仅仅可以用来解析字节流，
+*它实际上可以解析任何可以用正则表达式表达出来的内容。而且可以很方便的将解析代码嵌入到传统语言中。
+* 参考链接
+* https://baike.baidu.com/item/ragel
+*/
+
 /**@file tsk_ragel_state.h
  * @brief Ragel state for SIP, HTTP and MSRP parsing.
  */

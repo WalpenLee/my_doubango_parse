@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="headers%28%2a.h%29">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="headers%28%2a.h%29\tpdu">
+      <UniqueIdentifier>{b3a3d21e-f6e5-45c2-a0f2-28fbd2f75a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers%28%2a.h%29\rpdu">
+      <UniqueIdentifier>{aa804214-840e-46f4-b793-e0be52f5cf16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source%28%2a.c%29">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="source%28%2a.c%29\tpdu">
+      <UniqueIdentifier>{a68aeb48-4df4-4811-a3a8-5ab5b0780cd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source%28%2a.c%29\rpdu">
+      <UniqueIdentifier>{4b2fbd41-e8ab-4d22-8456-d3533b94974c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources%28%2a.rc%29">
+      <UniqueIdentifier>{ad6a899d-7248-4b63-bb40-8b22f1f3736f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tinysms.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms_config.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tsms.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tsms_address.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tsms_common.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tsms_etsi_gsm_03_38.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tsms_packing.h">
+      <Filter>headers%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tpdu\tsms_tpdu_command.h">
+      <Filter>headers%28%2a.h%29\tpdu</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tpdu\tsms_tpdu_deliver.h">
+      <Filter>headers%28%2a.h%29\tpdu</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tpdu\tsms_tpdu_report.h">
+      <Filter>headers%28%2a.h%29\tpdu</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tpdu\tsms_tpdu_status_report.h">
+      <Filter>headers%28%2a.h%29\tpdu</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\tpdu\tsms_tpdu_submit.h">
+      <Filter>headers%28%2a.h%29\tpdu</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinysms\rpdu\tsms_rpdu.h">
+      <Filter>headers%28%2a.h%29\rpdu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\tsms.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tsms_address.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tsms_common.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tsms_packing.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tpdu\tsms_tpdu_command.c">
+      <Filter>source%28%2a.c%29\tpdu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tpdu\tsms_tpdu_deliver.c">
+      <Filter>source%28%2a.c%29\tpdu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tpdu\tsms_tpdu_report.c">
+      <Filter>source%28%2a.c%29\tpdu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tpdu\tsms_tpdu_status_report.c">
+      <Filter>source%28%2a.c%29\tpdu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tpdu\tsms_tpdu_submit.c">
+      <Filter>source%28%2a.c%29\tpdu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rpdu\tsms_rpdu.c">
+      <Filter>source%28%2a.c%29\rpdu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version.rc">
+      <Filter>resources%28%2a.rc%29</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

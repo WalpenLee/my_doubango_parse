@@ -12,14 +12,38 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
-    <Filter Include="source%28%2a.c%29\content">
-      <UniqueIdentifier>{210b13b9-e3e3-47d3-9bf6-5b0b1b678b43}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ragel%28.%2arl%29">
       <UniqueIdentifier>{0f7711a4-2d4f-40cb-aad7-ddae3f7836b7}</UniqueIdentifier>
     </Filter>
     <Filter Include="resources%28%2a.rc%29">
       <UniqueIdentifier>{7d946a05-b202-4b17-afdf-6dc8521d8646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jtterbuffer">
+      <UniqueIdentifier>{b0c518ba-76e7-46e9-8fe6-d6315e787230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resampler">
+      <UniqueIdentifier>{276aec24-703c-4af0-9834-b9979dc888d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qos">
+      <UniqueIdentifier>{104a91e5-a843-4c76-bfce-008b38760b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="denoise">
+      <UniqueIdentifier>{513a113b-ab19-4bc9-8eb6-9f16ad7061b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="codec">
+      <UniqueIdentifier>{8f4be11c-08f8-420d-9a8e-9f7a716be81a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="session">
+      <UniqueIdentifier>{ab71b2c0-2023-4e3a-b294-2471c8463e6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media_producer">
+      <UniqueIdentifier>{bf2a3ecb-1b34-4b8a-9435-79294cac1f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media_consumer">
+      <UniqueIdentifier>{e37ef865-f1e7-4ae2-b13d-c6f346a93579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vad">
+      <UniqueIdentifier>{d862a07c-bddf-430d-91cf-5a33d126ac88}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -32,16 +56,7 @@
     <ClInclude Include="include\tinymedia\tmedia.h">
       <Filter>headers%28%2a.h%29</Filter>
     </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_codec.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_codec_dummy.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
     <ClInclude Include="include\tinymedia\tmedia_common.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_consumer.h">
       <Filter>headers%28%2a.h%29</Filter>
     </ClInclude>
     <ClInclude Include="include\tinymedia\tmedia_converter_video.h">
@@ -50,37 +65,10 @@
     <ClInclude Include="include\tinymedia\tmedia_defaults.h">
       <Filter>headers%28%2a.h%29</Filter>
     </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_denoise.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
     <ClInclude Include="include\tinymedia\tmedia_imageattr.h">
       <Filter>headers%28%2a.h%29</Filter>
     </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_jitterbuffer.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
     <ClInclude Include="include\tinymedia\tmedia_params.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_producer.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_qos.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_resampler.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_session.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_session_dummy.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_session_ghost.h">
-      <Filter>headers%28%2a.h%29</Filter>
-    </ClInclude>
-    <ClInclude Include="include\tinymedia\tmedia_vad.h">
       <Filter>headers%28%2a.h%29</Filter>
     </ClInclude>
     <ClInclude Include="include\tinymedia\content\tmedia_content.h">
@@ -95,21 +83,48 @@
     <ClInclude Include="include\tinymedia\content\tmedia_content_sip_frag.h">
       <Filter>headers%28%2a.h%29\content</Filter>
     </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_jitterbuffer.h">
+      <Filter>jtterbuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_resampler.h">
+      <Filter>resampler</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_qos.h">
+      <Filter>qos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_denoise.h">
+      <Filter>denoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_codec.h">
+      <Filter>codec</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_codec_dummy.h">
+      <Filter>codec</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_session.h">
+      <Filter>session</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_session_dummy.h">
+      <Filter>session</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_session_ghost.h">
+      <Filter>session</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_consumer.h">
+      <Filter>media_consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_producer.h">
+      <Filter>media_producer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinymedia\tmedia_vad.h">
+      <Filter>vad</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\tmedia.c">
       <Filter>source%28%2a.c%29</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_codec.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tmedia_codec_dummy.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
     <ClCompile Include="src\tmedia_common.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tmedia_consumer.c">
       <Filter>source%28%2a.c%29</Filter>
     </ClCompile>
     <ClCompile Include="src\tmedia_converter_video.c">
@@ -118,50 +133,59 @@
     <ClCompile Include="src\tmedia_defaults.c">
       <Filter>source%28%2a.c%29</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_denoise.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
     <ClCompile Include="src\tmedia_imageattr.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tmedia_jitterbuffer.c">
       <Filter>source%28%2a.c%29</Filter>
     </ClCompile>
     <ClCompile Include="src\tmedia_params.c">
       <Filter>source%28%2a.c%29</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_producer.c">
-      <Filter>source%28%2a.c%29</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tmedia_qos.c">
-      <Filter>source%28%2a.c%29</Filter>
+    <ClCompile Include="src\tmedia_jitterbuffer.c">
+      <Filter>jtterbuffer</Filter>
     </ClCompile>
     <ClCompile Include="src\tmedia_resampler.c">
-      <Filter>source%28%2a.c%29</Filter>
+      <Filter>resampler</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_session.c">
-      <Filter>source%28%2a.c%29</Filter>
+    <ClCompile Include="src\tmedia_qos.c">
+      <Filter>qos</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_session_dummy.c">
-      <Filter>source%28%2a.c%29</Filter>
+    <ClCompile Include="src\tmedia_denoise.c">
+      <Filter>denoise</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_session_ghost.c">
-      <Filter>source%28%2a.c%29</Filter>
+    <ClCompile Include="src\tmedia_codec.c">
+      <Filter>codec</Filter>
     </ClCompile>
-    <ClCompile Include="src\tmedia_vad.c">
-      <Filter>source%28%2a.c%29</Filter>
+    <ClCompile Include="src\tmedia_codec_dummy.c">
+      <Filter>codec</Filter>
     </ClCompile>
     <ClCompile Include="src\content\tmedia_content.c">
-      <Filter>source%28%2a.c%29\content</Filter>
+      <Filter>headers%28%2a.h%29\content</Filter>
     </ClCompile>
     <ClCompile Include="src\content\tmedia_content_cpim.c">
-      <Filter>source%28%2a.c%29\content</Filter>
+      <Filter>headers%28%2a.h%29\content</Filter>
     </ClCompile>
     <ClCompile Include="src\content\tmedia_content_multipart.c">
-      <Filter>source%28%2a.c%29\content</Filter>
+      <Filter>headers%28%2a.h%29\content</Filter>
     </ClCompile>
     <ClCompile Include="src\content\tmedia_content_sip_frag.c">
-      <Filter>source%28%2a.c%29\content</Filter>
+      <Filter>headers%28%2a.h%29\content</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_session.c">
+      <Filter>session</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_session_dummy.c">
+      <Filter>session</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_session_ghost.c">
+      <Filter>session</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_consumer.c">
+      <Filter>media_consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_producer.c">
+      <Filter>media_producer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tmedia_vad.c">
+      <Filter>vad</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

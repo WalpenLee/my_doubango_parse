@@ -1,0 +1,23 @@
+vs2015升级工程时：
+1、解决:无法解析的外部符号 __imp___vsnprintf 
+	在 vs2015 工程选项，链接器附加依赖项里面添加 legacy_stdio_definitions.lib 即可。
+	出现这个问题的原因是 vs2015 默认编译时将许多标准库采用内联方式处理，因而没有可以链接的标准库文件，所以要专门添加标准库文件来链接标准库中的函数。
+
+2、解决:无法解析的外部符号__iob_func
+	原来在 VS2015 中 __iob_func 改成了 __acrt_iob_func ,所以我参照《【LNK2019】 无法解析的外部符号 __iob》这篇文章的方法在自己的代码中增加了一个名为 __iob_func 转换函数：
+
+/* 
+ * 当libjpeg-turbo为vs2010编译时，vs2015下静态链接libjpeg-turbo会链接出错:找不到__iob_func, 
+ * 增加__iob_func到__acrt_iob_func的转换函数解决此问题, 
+ * 当libjpeg-turbo用vs2015编译时，不需要此补丁文件 
+ */  
+#if _MSC_VER>=1900  
+#include "stdio.h"   
+_ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned);   
+#ifdef __cplusplus   
+extern "C"   
+#endif   
+FILE* __cdecl __iob_func(unsigned i) {   
+    return __acrt_iob_func(i);   
+}  
+#endif /* _MSC_VER>=1900 */  

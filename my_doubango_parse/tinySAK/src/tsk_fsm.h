@@ -28,6 +28,12 @@
  *
 
  */
+
+/*
+* ÓÐÏÞ×´Ì¬»ú
+*
+*/
+
 #ifndef _TINYSAK_FSM_H_
 #define _TINYSAK_FSM_H_
 

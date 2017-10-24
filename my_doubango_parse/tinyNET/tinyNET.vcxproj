@@ -60,12 +60,12 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ws2_32.lib;IPHLPAPI.lib;$(OutDir)tinySAK.lib;..\thirdparties\win32\lib\openssl\libeay32.lib;..\thirdparties\win32\lib\openssl\ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;IPHLPAPI.lib;$(OutDir)tinySAK.lib;..\thirdparties\win32\lib\openssl\libeay32.lib;..\thirdparties\win32\lib\openssl\ssleay32.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>

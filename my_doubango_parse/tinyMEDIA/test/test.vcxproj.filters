@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{ea407d6f-3d83-4039-85a4-fc658acb9a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{fd92747f-0077-453c-b7a6-669bea8237de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{90e7a6d8-9733-42b1-a765-dd362070bfab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dummy.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="test_codecs.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_contents.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_image_attr.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_qos.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_sessions.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

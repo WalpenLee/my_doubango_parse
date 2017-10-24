@@ -27,6 +27,9 @@
  *
 
  */
+/*
+FCSÐ£Ñé
+*/
 #ifndef _TINYSAK_PPFCS16_H_
 #define _TINYSAK_PPFCS16_H_
 

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resources%28%2a.rc%29">
+      <UniqueIdentifier>{787191d9-2f39-4ed8-9b15-decdcf195747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtcp">
+      <UniqueIdentifier>{76393320-c0a2-4b15-a0d5-e5aab1b7c01b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtp">
+      <UniqueIdentifier>{c8034507-66a9-4760-98fe-4e8a93648230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtsp">
+      <UniqueIdentifier>{0574ee7c-6714-4d25-8223-5cc7d6e24130}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\rtcp\trtp_rtcp_header.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_packet.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_rblock.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_bye.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_fb.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_rr.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_sdes.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_sr.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_report_xr.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_sdes_chunck.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_sdes_item.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtcp\trtp_rtcp_session.c">
+      <Filter>rtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtp\trtp_rtp_header.c">
+      <Filter>rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtp\trtp_rtp_packet.c">
+      <Filter>rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtp\trtp_rtp_session.c">
+      <Filter>rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trtp.c" />
+    <ClCompile Include="src\trtp_manager.c" />
+    <ClCompile Include="src\trtp_srtp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tinyrtp\rtp\trtp_rtp_header.h">
+      <Filter>rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtp\trtp_rtp_packet.h">
+      <Filter>rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtp\trtp_rtp_session.h">
+      <Filter>rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_header.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_packet.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_rblock.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_bye.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_fb.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_rr.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_sdes.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_sr.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_report_xr.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_sdes_chunck.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_sdes_item.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp\rtcp\trtp_rtcp_session.h">
+      <Filter>rtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinyrtp.h" />
+    <ClInclude Include="include\tinyrtp_config.h" />
+    <ClInclude Include="include\tinyrtp\trtp.h" />
+    <ClInclude Include="include\tinyrtp\trtp_manager.h" />
+    <ClInclude Include="include\tinyrtp\trtp_srtp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version.rc">
+      <Filter>resources%28%2a.rc%29</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
