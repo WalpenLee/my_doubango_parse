@@ -14,6 +14,7 @@
     <ProjectGuid>{99B7D02F-8C70-4B45-AF3C-92313C3CEE15}</ProjectGuid>
     <RootNamespace>tinyRTP</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -24,7 +25,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -65,7 +66,7 @@
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ws2_32.lib;$(OutDir)tinySAK.lib;$(OutDir)tinyNET.lib;$(OutDir)tinyMEDIA.lib;..\thirdparties\win32\lib\srtp\libsrtp.a;..\thirdparties\win32\lib\libgcc.a;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;$(OutDir)tinySAK.lib;$(OutDir)tinyNET.lib;$(OutDir)tinyMEDIA.lib;..\thirdparties\win32\lib\srtp\libsrtp.a;..\thirdparties\win32\lib\libgcc.a;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
@@ -141,6 +142,20 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tinyMEDIA\tinyMEDIA.vcxproj">
+      <Project>{52814b0d-7dca-45b8-9a16-8b147040d619}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyNET\tinyNET.vcxproj">
+      <Project>{7522a458-92f4-4259-b906-e84c2a65d9f1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySAK\tinySAK.vcxproj">
+      <Project>{6bc9b796-10c6-4cf7-a6e4-e2daccda84da}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

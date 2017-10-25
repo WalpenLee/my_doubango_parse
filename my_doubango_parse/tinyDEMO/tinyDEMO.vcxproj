@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D1E1F982-2308-4008-A056-814EE137166D}</ProjectGuid>
+    <RootNamespace>tinyDEMO</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\thirdparties\win32\include;..\tinySAK\src;..\tinyNET\src;..\tinySMS\include;..\tinyHTTP\include;..\tinySIP\include;..\tinyDAV\include;..\tinyMEDIA\include;..\tinySDP\include;..\tinyMSRP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG_LEVEL=DEBUG_LEVEL_INFO;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(OutDir)tinySAK.lib;$(OutDir)tinySIP.lib;$(OutDir)tinyNET.lib;$(OutDir)tinySMS.lib;$(OutDir)tinyMEDIA.lib;$(OutDir)tinyDAV.lib;$(OutDir)tinySDP.lib;$(OutDir)tinyMSRP.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\thirdparties\win32\include;..\tinySAK\src;..\tinyNET\src;..\tinySMS\include;..\tinyHTTP\include;..\tinySIP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(OutDir)tinySAK.lib;$(OutDir)tinySIP.lib;$(OutDir)tinyNET.lib;$(OutDir)tinySMS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cmd.c" />
+    <ClCompile Include="common.c" />
+    <ClCompile Include="dssl.c" />
+    <ClCompile Include="invite.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="message.c" />
+    <ClCompile Include="options.c" />
+    <ClCompile Include="publish.c" />
+    <ClCompile Include="register.c" />
+    <ClCompile Include="subscribe.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmd.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="demo_config.h" />
+    <ClInclude Include="dssl.h" />
+    <ClInclude Include="invite.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="message.h" />
+    <ClInclude Include="options.h" />
+    <ClInclude Include="publish.h" />
+    <ClInclude Include="register.h" />
+    <ClInclude Include="subscribe.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asterisk.sn" />
+    <None Include="blinkmind.sn" />
+    <None Include="core-alcatel.sn" />
+    <None Include="core-colibria.sn" />
+    <None Include="core-doubango.sn" />
+    <None Include="core-ericsson.sn" />
+    <None Include="core-inexbee.sn" />
+    <None Include="core-micromethod.sn" />
+    <None Include="core-nsn.sn" />
+    <None Include="dssl.rl" />
+    <None Include="main.sn" />
+    <None Include="open-ims.test.sn" />
+    <None Include="publish.sn" />
+    <None Include="sample.sn" />
+    <None Include="sigcomp.sn" />
+    <None Include="sip2sip.info.sn" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tinyDAV\tinyDAV.vcxproj">
+      <Project>{8e2f0b2e-2596-4010-bf4a-2f688975b5c1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyHTTP\tinyHTTP.vcxproj">
+      <Project>{b3e45009-c7c3-4090-837c-2d30c9058443}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyIPSec\tinyIPSec.vcxproj">
+      <Project>{002ff064-588f-402e-a096-c8d033f49f40}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyMEDIA\tinyMEDIA.vcxproj">
+      <Project>{52814b0d-7dca-45b8-9a16-8b147040d619}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyMSRP\tinyMSRP.vcxproj">
+      <Project>{aa46af16-9678-4054-8e48-98dc21ecec82}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyNET\tinyNET.vcxproj">
+      <Project>{7522a458-92f4-4259-b906-e84c2a65d9f1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyRTP\tinyRTP.vcxproj">
+      <Project>{99b7d02f-8c70-4b45-af3c-92313c3cee15}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySAK\tinySAK.vcxproj">
+      <Project>{6bc9b796-10c6-4cf7-a6e4-e2daccda84da}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySDP\tinySDP.vcxproj">
+      <Project>{e45db518-6562-4033-80e8-60030f0b169f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySIGCOMP\tinySIGCOMP.vcxproj">
+      <Project>{76261dc8-25b3-43f4-9fb5-112c4ac0880e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySIP\tinySIP.vcxproj">
+      <Project>{4ce20732-9978-4a88-b586-cfefcb63e82d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinySMS\tinySMS.vcxproj">
+      <Project>{9a3a5af3-2333-4477-b880-7f901f9d8972}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

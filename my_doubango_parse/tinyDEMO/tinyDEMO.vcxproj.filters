@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source%28%2a.c%29">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="include%28%2a.h%29">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ragel%28%2a.rl%29">
+      <UniqueIdentifier>{a1241899-1fdd-4811-9d3c-9e022f722442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scenarios%28%2a.scn%29">
+      <UniqueIdentifier>{3eb0105d-9b7e-4690-a2b3-4a8699b3faa7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cmd.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="common.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="dssl.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="invite.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="message.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="options.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="publish.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="register.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+    <ClCompile Include="subscribe.c">
+      <Filter>source%28%2a.c%29</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmd.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="demo_config.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="dssl.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="invite.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="message.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="publish.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="register.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="subscribe.h">
+      <Filter>include%28%2a.h%29</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dssl.rl">
+      <Filter>ragel%28%2a.rl%29</Filter>
+    </None>
+    <None Include="asterisk.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="blinkmind.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-alcatel.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-colibria.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-doubango.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-ericsson.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-inexbee.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-micromethod.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="core-nsn.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="main.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="open-ims.test.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="publish.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="sample.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="sigcomp.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+    <None Include="sip2sip.info.sn">
+      <Filter>scenarios%28%2a.scn%29</Filter>
+    </None>
+  </ItemGroup>
+</Project>
