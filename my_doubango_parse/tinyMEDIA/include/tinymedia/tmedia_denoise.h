@@ -69,8 +69,10 @@ typedef struct tmedia_denoise_plugin_def_s {
     int (* open) (tmedia_denoise_t*, uint32_t record_frame_size_samples, uint32_t record_sampling_rate, uint32_t record_channels, uint32_t playback_frame_size_samples, uint32_t playback_sampling_rate, uint32_t playback_channels);
     int (*echo_playback) (tmedia_denoise_t* self, const void* echo_frame, uint32_t echo_frame_size_bytes);
     //! aec, vad, noise suppression, echo cancellation before sending packet over network
+	//传输网络之前做回声消除，人言检测，噪声抑制
     int (* process_record) (tmedia_denoise_t*, void* audio_frame, uint32_t audio_frame_size_bytes, tsk_bool_t* silence_or_noise);
     //! noise suppression before playing sound
+	//播放音频之前做噪声抑制
     int (* process_playback) (tmedia_denoise_t*, void* audio_frame, uint32_t audio_frame_size_bytes);
     int (* close) (tmedia_denoise_t* );
 }

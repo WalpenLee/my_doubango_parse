@@ -43,15 +43,19 @@
 #	define PREFER_SPEEX_DENOISER	1
 #endif
 
+/*
+* webrtc 回声模块封装
+*
+*/
 #if TDAV_UNDER_MOBILE
-#	include <webrtc/echo_control_mobile.h>
+#	include <webrtc/echo_control_mobile.h>//回声控制
 #	define	TDAV_WebRtcAec_Create(aecInst)	WebRtcAecm_Create(aecInst)
 #	define	TDAV_WebRtcAec_Free(aecInst)	WebRtcAecm_Free(aecInst)
 #	define	TDAV_WebRtcAec_Init(aecInst, sampFreq, scSampFreq)		WebRtcAecm_Init(aecInst, sampFreq)
 #	define	TDAV_WebRtcAec_BufferFarend(aecInst, farend, nrOfSamples)	WebRtcAecm_BufferFarend(aecInst, farend, nrOfSamples)
 #	define	TDAV_WebRtcAec_Process(aecInst, nearend, nearendH, out, outH, nrOfSamples, msInSndCardBuf, skew)	WebRtcAecm_Process(aecInst, nearend, nearend, out, nrOfSamples, msInSndCardBuf)
 #else
-#	include <webrtc/echo_cancellation.h>
+#	include <webrtc/echo_cancellation.h>//回声消除
 #	define	TDAV_WebRtcAec_Create(aecInst)	WebRtcAec_Create(aecInst)
 #	define	TDAV_WebRtcAec_Free(aecInst)	WebRtcAec_Free(aecInst)
 #	define	TDAV_WebRtcAec_Init(aecInst, sampFreq, scSampFreq)	WebRtcAec_Init(aecInst, sampFreq, scSampFreq)
@@ -59,10 +63,15 @@
 #	define	TDAV_WebRtcAec_Process(aecInst, nearend, nearendH, out, outH, nrOfSamples, msInSndCardBuf, skew)	WebRtcAec_Process(aecInst, nearend, nearendH, out, outH, nrOfSamples, msInSndCardBuf, skew)
 #endif
 
+
+/*
+* webrtc降噪模块封装
+*
+*/
 #if HAVE_SPEEX_DSP && PREFER_SPEEX_DENOISER
 #	include <speex/speex_preprocess.h>
 #else
-#	if TDAV_UNDER_MOBILE // Use fixed implementation for Noise Suppression
+#	if TDAV_UNDER_MOBILE // Use fixed implementation for Noise Suppression 使用定点算法降噪
 #		include <webrtc/noise_suppression_x.h>
 #		define	TDAV_WebRtcNs_Process(NS_inst, spframe, spframe_H, outframe, outframe_H) WebRtcNsx_Process(NS_inst, spframe, spframe_H, outframe, outframe_H)
 #		define	TDAV_WebRtcNs_Init(NS_inst, fs) WebRtcNsx_Init(NS_inst, fs)
@@ -70,7 +79,7 @@
 #		define	TDAV_WebRtcNs_Create(NS_inst) WebRtcNsx_Create(NS_inst)
 #		define  TDAV_NsHandle NsxHandle
 #	else
-#		include <webrtc/noise_suppression.h>
+#		include <webrtc/noise_suppression.h> //使用浮点算法降噪
 #		define	TDAV_WebRtcNs_Process(NS_inst, spframe, spframe_H, outframe, outframe_H) WebRtcNs_Process(NS_inst, spframe, spframe_H, outframe, outframe_H)
 #		define	TDAV_WebRtcNs_Init(NS_inst, fs) WebRtcNs_Init(NS_inst, fs)
 #		define	TDAV_WebRtcNs_Free(NS_inst) WebRtcNs_Free(NS_inst)
